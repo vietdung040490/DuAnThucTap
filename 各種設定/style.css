@@ -25,6 +25,10 @@ body{
     
 }
 
+.header__username{
+    padding-left: 10px;
+}
+
 .feature{
     width: 70%;
     margin: 0 auto;
