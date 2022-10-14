@@ -37,7 +37,45 @@ body{
 .feature{
     width: 70%;
     margin: 0 auto;
-    margin-top: 100px;
-    /* border: 3px solid black; */
-    padding: 50px 0;
+    margin-top: 20px;
 }
+
+.event-filter{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.button1{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+}
+
+.button2{
+    display: flex;
+    align-self: center;
+}
+
+.button > button, .filter > button{
+    padding: 10px 20px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th{
+    background-color: #022060;
+}
+
+tr:nth-child(2){
+    text-align: left;
+}
+
+
+
+

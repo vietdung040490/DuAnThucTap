@@ -20,27 +20,50 @@
     </div>
     <div class="content">
         <div class="feature">
-            <div>
-                <div>
-                    <p>履歴</p>
-                    <button>新しい順</button>
+            <div class="event-filter">
+                <div class="button button1">
+                    <div class="filter">
+                        <p>履歴</p>
+                        <button>新しい順</button>
+                    </div>
+                    <div class="filter">
+                        <p>履歴</p>
+                        <button>全て</button>
+                    </div>
+                    <div class="filter">
+                        <p>履歴</p>
+                        <button>全て</button>
+                    </div>
                 </div>
-                <div>
-                    <p>履歴</p>
-                    <button>全て</button>
-                </div>
-                <div>
-                    <p>履歴</p>
-                    <button>全て</button>
+                <div class="button button2">
+                    <button><<</button>
+                    <button><</button>
+                        1/10
+                    <button>></button>
+                    <button>>></button>
                 </div>
             </div>
-            <div>
-                
+
+            <div class="table">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>発生日時</th>
+                            <th>種別</th>
+                            <th>端末</th>
+                            <th>イベント内容</th>
+                        </tr>
+                    </thead>
+                    <tbody id="getData">
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
     <img src="../imgs/anh3.png" alt="">
+    <script src="./index.js"></script>
 </body>
 
 </html>
