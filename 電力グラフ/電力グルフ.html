@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Du An Thuc Tap</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+   
 
 </head>
 
 <body>
     <div class="header">
-        <div class="header__logo">Du An Thuc Tap</div>
+        <div class="header__logo">電力グラフ</div>
         <div class="header__user">
             <div class="header__button"><button>ログアウト</button></div>
             <div class="header__username">ユーザーsakai</div>
@@ -20,16 +22,12 @@
     </div>
     <div class="content">
         <div class="feature">
-            <p><a href=""></a></p>
-            <p><a href="./電力グラフ/電力グルフ.html">2.電力グルフ</a></p>
-            <p><a href="./履歴/履歴.html">3.履歴</a></p>
-            <p><a href="./各種設定/各種設定.html">4.各種設定</a></p>
+            <div class="graph">
+                <canvas id="myChart"></canvas>
+            </div>
         </div>
     </div>
-    <div><img src="./imgs/anh1.png" alt=""></div>
-    <div><img src="./imgs/anh2.png" alt=""></div>
-    <div><img src="./imgs/anh3.png" alt=""></div>
-    <div><img src="./imgs/anh4.png" alt=""></div>
+    <script src="./index.js"></script>
 </body>
 
 </html>

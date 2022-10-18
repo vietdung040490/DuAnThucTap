@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0e70c0;
+    color: white;
+}
+
+.header{
+    display: flex;
+    padding: 5px 10px;
+    width: 70%;
+    height: 80px;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    margin-top: 20px;
+}
+
+.header__logo{
+    line-height: 80px;
+    font-size: 30px;
+}
+
+.header__user{
+    display: flex;
+    
+}
+
+.header__username{
+    padding-left: 10px;
+}
+
+.feature{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 100px;
+    /* border: 3px solid black; */
+    padding: 50px 0;
+}
