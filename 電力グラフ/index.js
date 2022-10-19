@@ -98,7 +98,7 @@ window.onload = function () {
             datasets: [
                 { //loại data thứ 1
                     data: [],
-                    label: '電力グラフ1',// label ở bên phải
+                    label: '電力グラフ1',
                     backgroundColor: "rgb(255,99,132, 0.5)",
                     borderColor: "#36a2eb",
                 },
@@ -108,7 +108,7 @@ window.onload = function () {
                     backgroundColor: "",
                     borderColor: "#36a2eb",
                     fill: false,
-                    borderColor: "#0000ff",
+                    borderColor: "rgba(78, 79, 1, 0.5)",
                     backgroundColor: "rgba(255,10,13,255)",
                     type: 'line',
                     order: 2
