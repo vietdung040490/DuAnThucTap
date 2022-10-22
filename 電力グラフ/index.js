@@ -102,23 +102,18 @@ window.onload = function () {
                     backgroundColor: "rgb(255,99,132, 0.5)",
                     borderColor: "#36a2eb",
                 },
-                {
-                    data: [],
-                    label: '',// label ở bên phải
-                    backgroundColor: "",
-                    borderColor: "#36a2eb",
-                    fill: false,
-                    borderColor: "rgba(78, 79, 1, 0.5)",
-                    backgroundColor: "rgba(255,10,13,255)",
-                    type: 'line',
-                    order: 2
-                }
-                // {// loại data thứ 2
+                // {
                 //     data: [],
-                //     label: 'label',// label thứ 2
-                //     backgroundColor: "#ff638488",
-                //     borderColor: "#ff6384",
+                //     label: '',// label ở bên phải
+                //     backgroundColor: "",
+                //     borderColor: "#36a2eb",
+                //     fill: false,
+                //     borderColor: "rgba(78, 79, 1, 0.5)",
+                //     backgroundColor: "rgba(255,10,13,255)",
+                //     type: 'line',
+                //     order: 2
                 // }
+                
             ],
         },
         options: {
@@ -150,10 +145,14 @@ window.onload = function () {
     let index = 0;
     setInterval(function () {
         let data = [];
+        let d = new Date();
+        let time = d.getHours()+ 'h' + d.getMinutes() + 'p' + d.getSeconds() + 's';
         myChart2.data.datasets.forEach((dataset) => {
             data.push(Math.floor(Math.random() * 8000));
+
         });
-        addData(myChart2, "電力", data);
+
+        addData(myChart2, time, data);
         index++;
     }, 1000);
 }
