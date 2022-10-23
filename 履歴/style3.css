@@ -1,15 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #0e70c0;
     color: white;
 }
 
-.header{
+.header {
     display: flex;
     padding: 5px 10px;
     width: 70%;
@@ -20,45 +20,46 @@ body{
     margin-top: 20px;
 }
 
-.header__logo{
+.header__logo {
     line-height: 80px;
     font-size: 30px;
 }
 
-.header__user{
+.header__user {
     display: flex;
-    
+
 }
 
-.header__username{
+.header__username {
     padding-left: 10px;
 }
 
-.feature{
+.feature {
     width: 70%;
     margin: 0 auto;
     margin-top: 20px;
 }
 
-.event-filter{
+.event-filter {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.button1{
+.button1 {
     display: flex;
     width: 50%;
     justify-content: space-evenly;
     padding: 10px 20px;
 }
 
-.button2{
+.button2 {
     display: flex;
     align-self: center;
 }
 
-.button > button, .filter > button{
+.button>button,
+.filter>button {
     padding: 10px 20px;
 }
 
@@ -68,18 +69,45 @@ table {
     width: 100%;
 }
 
-.table{
+.table {
     display: flex;
 }
 
-th{
+th {
     background-color: #022060;
 }
 
-tr:nth-child(2){
+tr:nth-child(2) {
     text-align: left;
 }
 
+.tableRednder {
+    width: 100%;
+}
 
+@media only screen and (max-width: 740px){
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        border-bottom: 3px solid black;
+        padding-bottom: 10px;
+    }
 
+    .feature{
+        width: 100%;
+        
+    }
 
+    .event-filter{
+        display: flex;
+        flex-direction: column;
+    }
+    .button1{
+        text-align: center;
+        width: 100%;
+    }
+
+}

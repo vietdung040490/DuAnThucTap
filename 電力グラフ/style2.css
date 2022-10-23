@@ -41,3 +41,20 @@ body{
     /* border: 3px solid black; */
     padding: 50px 0;
 }
+
+@media only screen and (max-width: 740px){
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        border-bottom: 3px solid black;
+        padding-bottom: 10px;
+    }
+
+    .feature{
+        width: 100%;
+    }
+
+}
