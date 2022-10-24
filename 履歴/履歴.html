@@ -35,12 +35,12 @@
                         <button>全て</button>
                     </div>
                 </div>
-                <div class="button button2">
-                    <button><<</button>
-                    <button><</button>
-                        1/10
-                    <button>></button>
-                    <button>>></button>
+                <div class="button button2" id="button2">
+                    <button onclick="handleFirstPage()"> << </button>
+                    <button onclick="handlePreviosPage()"> < </button>
+                    <p id="currentPageNumber"></p>
+                    <button onclick="handleNextPage()"> > </button>
+                    <button onclick="handleLastPage()"> >> </button>
                 </div>
             </div>
 

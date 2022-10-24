@@ -149,6 +149,8 @@ window.onload = function () {
         addData(myChart2, time, data);
         index++;
     }, 300);
+
+    //phân trang
 }
 
 
