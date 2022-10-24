@@ -1215,7 +1215,7 @@ let eventsArray = [
 
 let currentEventsPerPage = [];
 let currentPage = 1;
-let perPage = 26;
+let perPage = 19;
 let totalPages = Math.ceil(eventsArray.length / perPage);
 
 
