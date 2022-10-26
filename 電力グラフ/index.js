@@ -190,7 +190,7 @@ window.onload = function () {
 
     
         addData(myChart2, time, data);
-    }, 100);
+    }, 3000);
 
 }
 
