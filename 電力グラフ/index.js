@@ -62,7 +62,7 @@ window.onload = function () {
     // }, 500);
 
     // chart 2
-    
+
 
     let ctx = document.getElementById('myChart2').getContext('2d');
     let myChart2 = new Chart(ctx, {
@@ -84,12 +84,12 @@ window.onload = function () {
                     label: '電力グラフ2',
                     backgroundColor: "#fd0000",
                     borderColor: "#36a2eb",
-                },{ //loại data thứ 3
+                }, { //loại data thứ 3
                     data: [],
                     label: '電力グラフ3',
                     backgroundColor: "#ffff00",
                     borderColor: "#36a2eb",
-                },{ //loại data thứ 4
+                }, { //loại data thứ 4
                     data: [],
                     label: '電力グラフ4',
                     backgroundColor: "#70ac47",
@@ -106,19 +106,19 @@ window.onload = function () {
             },
             scales: {//tracked bar chart, xếp trồng dữ liệu lên 1 cột
                 xAxes: [{
-                  stacked: true,
-                  gridLines: {
-                    display: false,
-                  }
+                    stacked: true,
+                    gridLines: {
+                        display: false,
+                    }
                 }],
                 yAxes: [{
-                  stacked: true,
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                  type: 'linear',
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                    type: 'linear',
                 }]
-              },
+            },
             legend: {//label tiêu đề nhỏ, ghi chú loại dữ liệu của từng cột
                 display: true,
                 position: 'top',
@@ -148,7 +148,7 @@ window.onload = function () {
             dataset.data.push(d);
             data.shift();
         });
-        
+
         let maxPoints = 24;// số cột
         let removeData = false;//
         chart.data.datasets.forEach((dataset) => {
@@ -169,15 +169,28 @@ window.onload = function () {
         let data = [];
         //get time
         let d = new Date();
-        let time = d.getHours()+ 'h' + d.getMinutes() + 'p' + d.getSeconds() + 's';
+        let time = d.getHours() + 'h' + d.getMinutes() + 'p' + d.getSeconds() + 's';
 
         //add data and label
         myChart2.data.datasets.forEach((dataset) => {
-            data.push(Math.floor(Math.random() * 800));
+            data.push(Math.floor(Math.random() * 1000));
         });
-        // console.log(data)
+
+        // thông số cho đồ hình
+        let kwh1 = data[0], kwh2 = data[1], okane = data[2]; coco = data[3];
+        document.getElementById('data3').innerHTML = kwh1 + ' (kwh)';
+        document.getElementById('data4').innerHTML = kwh2 + ' (kwh)';
+        document.getElementById('data7').innerHTML = okane + ' (円)';
+        document.getElementById('data8').innerHTML = coco + ' (Kg)';
+
+        document.getElementById('dataBar1').style.width = (kwh1 / 3000 * 100).toString() + 'px';
+        document.getElementById('dataBar2').style.width = (kwh2 / 3000 * 100).toString() + 'px';
+        document.getElementById('dataBar5').style.width = (okane / 3000 * 100).toString() + 'px';
+        document.getElementById('dataBar6').style.width = (coco / 3000 * 100).toString() + 'px';
+
+    
         addData(myChart2, time, data);
-    }, 1000);
+    }, 100);
 
 }
 

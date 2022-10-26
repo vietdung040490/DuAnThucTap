@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>電力グラフ</title>
     <link rel="stylesheet" href="./電力グルフ.css">
+    <!-- chartjs lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -22,6 +26,42 @@
         <div class="feature">
             <div class="chart">
                 <canvas id="myChart2" width="600" height="400"></canvas>
+            </div>
+
+            <div class="tableDiv">
+                <table class="table1">
+                    <tr>
+                        <td colspan="2" class="icon" id="icon1"><i class="fa-solid fa-lightbulb"></i></td>
+                        <td colspan="2" class="icon" id="icon2"><i class="fa-solid fa-lightbulb"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="data1"><div id="dataBar1"></div></td>
+                        <td colspan="2" id="data2"><div id="dataBar2"></div></td>
+                    </tr>
+                    <tr>
+                        <td>デマンド電力(kwh)</td>
+                        <td id="data3">data3</td>
+                        <td>デマンド電力(kwh)</td>
+                        <td id="data4">data4</td>
+                    </tr>
+                </table>
+                <br><br><br><br><br>
+                <table class="table2">
+                    <tr>
+                        <td colspan="2" class="icon" id="icon5"><i class="fa-solid fa-lightbulb"></td>
+                        <td colspan="2" class="icon" id="icon6"><i class="fa-solid fa-lightbulb"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="data5"><div id="dataBar5"></div></td>
+                        <td colspan="2" id="data6"><div id="dataBar6"></div></td>
+                    </tr>
+                    <tr>
+                        <td>デマンド電力(kwh)</td>
+                        <td id="data7">data7</td>
+                        <td>デマンド電力(kwh)</td>
+                        <td id="data8">data8</td>
+                    </tr>
+                </table>
             </div>
 
             
