@@ -54,6 +54,10 @@ body {
     padding: 10px;
 }
 
+tr, td{
+    width: 150px
+}
+
 .chart{
     width: 65%;
     padding: 30px 0px 0px 35px;

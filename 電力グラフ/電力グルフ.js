@@ -183,14 +183,13 @@ window.onload = function () {
         document.getElementById('data7').innerHTML = okane + ' (円)';
         document.getElementById('data8').innerHTML = coco + ' (Kg)';
 
-        document.getElementById('dataBar1').style.width = (kwh1 / 3000 * 100).toString() + 'px';
-        document.getElementById('dataBar2').style.width = (kwh2 / 3000 * 100).toString() + 'px';
-        document.getElementById('dataBar5').style.width = (okane / 3000 * 100).toString() + 'px';
-        document.getElementById('dataBar6').style.width = (coco / 3000 * 100).toString() + 'px';
+        document.getElementById('dataBar1').style.width = (kwh1 / 1000 * 100).toString() + 'px';
+        document.getElementById('dataBar2').style.width = (kwh2 / 1000 * 100).toString() + 'px';
+        document.getElementById('dataBar5').style.width = (okane / 1000 * 100).toString() + 'px';
+        document.getElementById('dataBar6').style.width = (coco / 1000 * 100).toString() + 'px';
 
-    
         addData(myChart2, time, data);
-    }, 3000);
+    }, 2000);
 
 }
 
