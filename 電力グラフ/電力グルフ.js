@@ -169,7 +169,7 @@ window.onload = function () {
         let data = [];
         //get time
         let d = new Date();
-        let time = d.getHours() + 'h' + d.getMinutes() + 'p' + d.getSeconds() + 's';
+        let time = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
 
         //add data and label
         myChart2.data.datasets.forEach((dataset) => {
@@ -189,7 +189,7 @@ window.onload = function () {
         document.getElementById('dataBar6').style.width = (coco / 1000 * 100).toString() + 'px';
 
         addData(myChart2, time, data);
-    }, 2000);
+    }, 500);
 
 }
 
