@@ -189,7 +189,7 @@ window.onload = function () {
         document.getElementById('dataBar6').style.width = (coco / 1000 * 100).toString() + 'px';
 
         addData(myChart2, time, data);
-    }, 500);
+    }, 2000);
 
 }
 
