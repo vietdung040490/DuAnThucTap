@@ -1,7 +1,7 @@
 let eventsArray = [
     {
         timeCount: 1,
-        time: "page 1 2022/08/26 23:00:00",
+        time: "Du Lieu Moi Nhat page 1 2022/08/26 23:00:00",
         kind: "種別",
         device: "PC",
         content: "ログイン"
@@ -114,13 +114,13 @@ let eventsArray = [
         kind: "種別",
         device: "PC",
         content: "ログイン"
-    },{
+    }, {
         timeCount: 20,
         time: "2022/08/26 23:00:00",
         kind: "種別",
         device: "PC",
         content: "ログイン"
-    },  {
+    }, {
         timeCount: 21,
         time: "2022/08/26 23:00:00",
         kind: "種別",
@@ -347,7 +347,7 @@ let eventsArray = [
         kind: "種別",
         device: "PC",
         content: "ログイン"
-    },{
+    }, {
         timeCount: 59,
         time: "2022/08/26 23:00:00",
         kind: "種別",
@@ -409,7 +409,7 @@ let eventsArray = [
         content: "ログイン"
     }, {
         timeCount: 69,
-        time: "     page 5      2022/08/26 23:00:00",
+        time: "Du Lieu Cu Nhat page 5 2022/08/26 23:00:00",
         kind: "種別",
         device: "PC",
         content: "ログイン"
@@ -529,16 +529,14 @@ handleLastPage = () => {
 
 // sắp xếp page mới đến cũ
 handleLatestEvents = () => {
-    let latestEvents = eventsArray.sort((a, b) => b.timeCount - a.timeCount)
+    let latestEvents = eventsArray.sort((a, b) => a.timeCount - b.timeCount)
     renderEvents(currentPage, latestEvents);
 }
 
 //sắp xếp cũ đến mới
 handleOldestEvents = () => {
-    let latestEvents = eventsArray.sort((a, b) => a.timeCount - b.timeCount)
-    renderEvents(currentPage, latestEvents);
+    let oldestEvents = eventsArray.sort((a, b) => b.timeCount - a.timeCount)
+    renderEvents(currentPage, oldestEvents);
 }
 
 renderEvents(currentPage, eventsArray);
-
-// phân trang

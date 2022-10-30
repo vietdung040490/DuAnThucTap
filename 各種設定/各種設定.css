@@ -11,6 +11,8 @@ a{
 body{
     background-color: #0e70c0;
     color: white;
+    font-family: sans-serif;
+
 }
 
 .header{
@@ -32,11 +34,15 @@ body{
 .header__user{
     display: flex;
     /* align-self: flex-start; */
+    position: relative;
+
     
 }
 
 .header__username{
     padding-left: 10px;
+    display: none;
+
 }
 
 .feature{
@@ -72,6 +78,47 @@ body{
 .settei{
     margin-top: 10px;
 }
+
+/* modal login */
+.modal{
+    background-color: #efefef;
+    color: black;
+    padding: 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: 30px;
+    /* right: 0px */
+
+}
+
+.modal__body, .modal__username, .modal__header{
+    margin-bottom: 5px;
+}
+
+#LogOut, .modal{
+    display: none;
+}
+
+.modal__header{
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal__footer{
+    float: right;
+}
+
+.modal__footer > button{
+    padding: 3px 9px;
+}
+
+/* check */
+
+#error_username, #error_password{
+    color: red;
+    font-size: 10px;
+}
+
 
 /* Mobile: */
 @media only screen and (max-width: 740px){

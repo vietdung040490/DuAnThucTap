@@ -14,8 +14,33 @@
     <div class="header">
         <div class="header__logo">イベント内容の履歴</div>
         <div class="header__user">
-            <div class="header__button"><button>ログアウト</button></div>
-            <div class="header__username">ユーザーsakai</div>
+            <div class="header__button"><button id="LogOut" onclick="logOut()">ログアウト</button></div>
+            <div class="header__button" ><button id="logIn" onclick="logIn()">ログイン</button></div>
+            <div class="modal" id="modal">
+                <div class="modal_inner">
+                    <div class="modal__header">
+                        <p class="modal__login">LOGIN</p>
+                    </div>
+                    <div class="modal__body">
+                        <div class="modal__username">
+                            <p class="modal__p">Username</p>
+                            <input id="modal__inputUsername" type="text">
+                            <p id="error_username"></p>
+                        </div>
+                        <div class="modal__password">
+                            <p class="modal__p">Password</p>
+                            <input id="modal__inputPassword" type="password">
+                            <p id="error_password"></p>
+                        </div>
+                    </div>
+                    <div class="modal__footer">
+                        <button id="modal__loginButton" onclick="checkUser()">Login</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="header__username" id="header__username">ユーザーsakai</div>
         </div>
     </div>
     <div class="content">
@@ -68,6 +93,8 @@
 
     <!-- <img src="../imgs/anh3.png" alt=""> -->
     <script src="./履歴.js"></script>
+    <script src="../account.js"></script>
+
 </body>
 
 </html>
