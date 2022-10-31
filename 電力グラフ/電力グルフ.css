@@ -42,7 +42,6 @@ a {
     display: none;
 }
 
-
 #backButton {
     width: 70%;
     margin: 0 auto;
@@ -92,7 +91,7 @@ td {
 .icon {
     font-size: 100px;
     text-align: center;
-    height: 13rem;
+    height: 12rem;
 }
 
 #data1,
@@ -146,7 +145,6 @@ td {
 }
 
 /* check */
-
 #error_username, #error_password{
     color: red;
     font-size: 10px;
