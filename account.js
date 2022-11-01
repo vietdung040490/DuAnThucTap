@@ -10,13 +10,16 @@ const usersData = [
 
 ];
 
-let logOut = function () {
+function logOut() {
     document.getElementById('LogOut').style.display = "none";
     document.getElementById('header__username').style.display = "none";
     document.getElementById('logIn').style.display = "unset";
+    isLogin = false;
+    localStorage.setItem('isLogin', isLogin);
+    localStorage.setItem('name', '');
 }
 
-let logIn = function () {
+function logIn() {
     document.getElementById('modal').style.display = "unset";
     document.querySelector('#error_username').innerHTML = "";
     document.querySelector('#error_password').innerHTML = "";
@@ -24,50 +27,77 @@ let logIn = function () {
     document.querySelector('#modal__inputUsername').value = "";
 }
 
-// let isLogin = localStorage.getItem('checkLogin');
-// console.log(isLogin)
-let checkLogin = false;
+
+
 let checkUser = function () {
     let name = document.getElementById('modal__inputUsername').value;
     let pass = document.getElementById('modal__inputPassword').value;
     //check 
-    checkLogin = usersData.some(value => value.name === name && value.pass === pass);
+    let checkLogin = usersData.some(value => value.name === name && value.pass === pass);
 
     if (name.trim() === '' && pass.length < 8) {
         document.querySelector('#error_username').innerHTML = 'ユーザーを入力して下さい';
         document.querySelector('#error_password').innerHTML = 'パスワードは８桁からです';
-    }else if(name.trim() === '' && pass.length >= 8){
+    } else if (name.trim() === '' && pass.length >= 8) {
         document.querySelector('#error_username').innerHTML = 'ユーザーを入力して下さい';
         document.querySelector('#error_password').innerHTML = '';
 
-    }else if(name.trim() !== '' && pass.length < 8){
+    } else if (name.trim() !== '' && pass.length < 8) {
         document.querySelector('#error_password').innerHTML = 'パスワードは８桁からです';
         document.querySelector('#error_username').innerHTML = '';
-    }
-    
-    else if (name.trim() === '') {
+    } else if (name.trim() === '') {
         document.querySelector('#error_username').innerHTML = 'ユーザーを入力して下さい';
     } else if (pass.length < 8) {
         document.querySelector('#error_password').innerHTML = 'パスワードは８桁からです';
     } else if (checkLogin) {
-        document.getElementById('LogOut').style.display = "unset";
-        document.getElementById('logIn').style.display = "none";
-        document.getElementById('modal').style.display = "none";
-        document.getElementById('header__username').innerHTML = `ユーザー${name}`;
-        document.getElementById('header__username').style.display = "unset";
-        document.getElementById('modal__inputUsername').value = '';
-        document.getElementById('modal__inputPassword').value = '';
-        // isLogin = true;
-        // localStorage.setItem('checkLogin', checkLogin);
+        handleLogin(name);
+        isLogin = true;
+        localStorage.setItem('isLogin', isLogin);
+        localStorage.setItem('name', name)
     } else {
         document.querySelector('#error_username').innerHTML = '';
         document.querySelector('#error_password').innerHTML = '';
         alert('ユーザーかパスワードが間違えます');
-        // isLogin = false;
-        // localStorage.setItem('checkLogin', checkLogin);
+
     }
 
 }
+
+// checkUser(); 
+
+function handleLogin(name) {
+    document.getElementById('LogOut').style.display = "unset";
+    document.getElementById('logIn').style.display = "none";
+    document.getElementById('modal').style.display = "none";
+    document.getElementById('header__username').innerHTML = `ユーザー${name}`;
+    document.getElementById('header__username').style.display = "unset";
+    document.getElementById('modal__inputUsername').value = '';
+    document.getElementById('modal__inputPassword').value = '';
+}
+
+
+let isLogin;
+
+if (localStorage.getItem('isLogin') === 'true') {
+    isLogin = true;
+} else isLogin = false;
+
+console.log('1 isLogin', isLogin);
+
+function checkLoginKey() {
+
+    let name = localStorage.getItem('name');
+    if (isLogin) {
+        handleLogin(name);
+        console.log('login ok')
+
+    } else { console.log('login fail')}
+
+}
+
+checkLoginKey();
+
+
 document.getElementById('modal__inputUsername').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         checkUser();
@@ -83,7 +113,12 @@ document.getElementById('modal__inputPassword').addEventListener('keypress', fun
 
 
 
+// let a = true
 
+// if(a=== true){
+//     console.log('true');
+
+// }else console.log('false');
 
 
 

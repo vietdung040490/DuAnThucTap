@@ -2,7 +2,7 @@
 Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.global.defaultFontSize = 14;
 Chart.defaults.global.defaultFontColor = 'black';
-window.onload = function () {
+// window.onload = function () {
     // chart 1
     // let myChart = document.getElementById('myChart').getContext('2d');
     // let myFristChart = new Chart(myChart, {
@@ -189,8 +189,8 @@ window.onload = function () {
         document.getElementById('dataBar6').style.width = (coco / 1000 * 100).toString() + 'px';
 
         addData(myChart2, time, data);
-    }, 2000);
+    }, 1000);
 
-}
+// }
 
 
