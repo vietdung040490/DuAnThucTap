@@ -84,18 +84,15 @@ if (localStorage.getItem('isLogin') === 'true') {
 
 console.log('1 isLogin', isLogin);
 
-function checkLoginKey() {
-
+function checkLoginStatus() {
     let name = localStorage.getItem('name');
     if (isLogin) {
         handleLogin(name);
         console.log('login ok')
-
     } else { console.log('login fail')}
-
 }
 
-checkLoginKey();
+checkLoginStatus();
 
 
 document.getElementById('modal__inputUsername').addEventListener('keypress', function (e) {

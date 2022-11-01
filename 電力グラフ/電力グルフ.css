@@ -28,7 +28,7 @@ a {
 }
 
 .header__logo {
-    line-height: 80px;
+    line-height: 60px;
     font-size: 30px;
 }
 
@@ -91,7 +91,11 @@ td {
 .icon {
     font-size: 100px;
     text-align: center;
-    height: 12rem;
+    /* height: 12rem; */
+}
+
+.table1, .table2{
+    height: 45%;
 }
 
 #data1,
@@ -99,6 +103,7 @@ td {
 #data5,
 #data6 {
     padding: 0px;
+    height: 2rem;
 }
 
 #dataBar1,
@@ -107,7 +112,7 @@ td {
 #dataBar6 {
     background-color: yellow;
     width: 0%;
-    height: 25px;
+    height: 100%;
 }
 
 /* login */
